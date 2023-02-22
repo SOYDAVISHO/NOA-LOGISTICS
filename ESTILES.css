@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: sans-serif;
+}
+
+    body {
+
+        background-color:rgb(207, 206, 206);
+        
+        }
+
+
+
+-bg{
+    background: blue;
+    width: 100vw;
+    height: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    height: 120px;
+    width: 100%;
+    background: rgb(207, 206, 206);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav .logo{
+
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: orangered;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+    background-color: black
+}
+
+
+nav .menu-btn i{
+    color: red;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"] {
+
+    display: none;
+}
+
+.active {
+    background: black;
+    color: orangered;
+    
+}
+
+nav ul li a:hover{
+    background: orangered;
+    color:black;
+}
+
+@media (max-width: 1000px){
+    nav{
+        padding: 0 40px 0 50px;
+       
+    }
+
+   
+}
+@media (max-width: 1090px){
+    nav .menu-btn i {
+        display: block;
+    }
+    #click:checked ~ .menu-btn i::before {
+        content: '\f00d';
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: gray;
+        height: 100vw;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.03s ease;
+    }
+    #click:checked ~ ul {
+        left: 0;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    nav ul li a{
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a {
+        margin-left: 0;
+    }
+    nav ul li a .active,
+    nav ul li a:hover {
+        background: orangered;
+        color: black;
+
+
+    }
+    .active {
+        background: black;
+        color: orangered;
+    }
+}
+
+
+
+
+
+.tenemos{
+    background-color: orangered;
+    margin-bottom: 0px;
+    font-size: clamp(2em, 5vw, 5em);
+    margin: 10px 0px 13px 0px;
+    padding: 0px 0px;
+    ;
+
+    }
+    
+
+
+.abajo{
+
+    background-color:orangered;
+    margin-bottom: 100px;
+    margin: 50px 0px 0px 0px;
+    font-size: 11px;
+    padding: 0.5px 0px;
+    align-items: center;
+}
+
+
+    .ultimo a:hover{
+        background-color: white;
+        color: rgb(182, 0, 0);
+        font-size: 30px;
+        
+        margin: 0px 0px 0px 0px;
+    }
+
+    .finalisima{
+        width: 40%
+
+
+
+
+        }
+
+        .portada{
+            width: 100%
+            
+            
+        }
+        
+
+        .kaka{
+            width: 90%
+        
+            
+        
+            
+            
+            
+
+        }
+
+        .kaka{
+            padding: 0px 20px;
+        }
+
+        .ubicaciones{
+            width: 80%
+            
+
+            
+            
+        }
+
+        .kaka1{
+            width: 80%
+        
+            
+        
+            
+            
+            
+
+        }
+
+        .kaka1{
+            padding: 0px 20px;
+        }
+
+        .ubicaciones1{
+            width: 40%
+        }
+
+        .ubicaciones1{
+            margin-top: 15px;
+        }
+
+        .ultimo a{
+            text-decoration: none;
+            color: blue;
+        }
+
+        /*PREGUNTAS Y RESPUESTAS*/
+        
+
+.contenedor-acordeon{
+width: 100%;
+max-width: 800px;
+margin: auto;
+margin-top: 80px;
+
+}
+
+.contenedor-acordeon h2{
+text-align: center;
+font-size: clamp(2em, 5vw, 5em);
+margin-bottom: 35px;
+
+
+
+}
+
+.acordeon{
+
+background-color: white;
+}
+
+.acordeon label{
+display: block;
+padding: 20px;
+font-size: 30px;
+background: sandybrown;
+color: black;
+cursor: pointer;
+margin-bottom: 2px;
+transition: all 300ms ease;
+
+
+
+}
+
+.acordeon label:hover{
+
+background-color: orangered;
+color: black;
+
+}
+
+.acordeon .contenido-acordeon{
+padding: 0px;
+margin: 0px 20px;
+max-height: 0px;
+overflow: hidden;
+transition: all 300ms ease;
+
+
+}
+
+.btn-acordeon:checked ~ .contenido-acordeon{
+
+    max-height: 600px;
+    padding: 15px 0px;
+
+}
+
+.btn-acordeon{
+display: none;
+
+}
+
+@media screen and (max-width:900px) {
+    .contenedor-acordeon{
+        width: 90%;
+    }
+}
+
+.contenido-acordeon{
+
+    font-size: 20px;
+}
+
